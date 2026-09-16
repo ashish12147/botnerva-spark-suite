@@ -130,7 +130,7 @@ const Index = () => {
                   ))}
                 </div>
                 <Link
-                  to={`/projects/${p.id}`}
+                  to={p.id === "crimecamera" ? "/crimecamera" : `/projects/${p.id}`}
                   className="inline-flex items-center gap-1 mt-4 text-sm text-primary hover:underline font-medium"
                 >
                   View Details <ArrowRight size={14} />
