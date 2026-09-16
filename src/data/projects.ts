@@ -1,6 +1,6 @@
-import { Globe, Bot, Mail, FileText, Workflow, Shield } from "lucide-react";
+import { Globe, Bot, Mail, FileText, Workflow, Shield, Camera } from "lucide-react";
 
-export type ProjectCategory = "Scraping" | "Automation" | "Integrations" | "Monitoring" | "Concepts";
+export type ProjectCategory = "Products" | "Scraping" | "Automation" | "Integrations" | "Monitoring" | "Concepts";
 
 export interface Project {
   id: string;
@@ -15,6 +15,24 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: "crimecamera",
+    title: "CrimeCamera",
+    description: "Record it. Secure it. Even if your phone doesn't survive.",
+    longDescription: "CrimeCamera by BotNerva Technologies is a safety-first recording product in active development. It is designed to encrypt and secure small recording chunks continuously so footage that has already reached protected remote storage can survive a phone being snatched, damaged, powered off, or otherwise made unavailable during an incident.",
+    categories: ["Products", "Monitoring"],
+    icon: Camera,
+    techStack: ["Android", "Kotlin", "Supabase", "Encrypted Cloud Storage"],
+    features: [
+      "Continuous encrypted recording chunks",
+      "Cloud protection while recording",
+      "PIN-protected evidence access",
+      "Server-side deletion protection",
+      "Tamper-evident integrity chain",
+      "Verified evidence recovery workflow",
+    ],
+    isConcept: false,
+  },
   {
     id: "web-scraper-suite",
     title: "Web Scraper Suite",
@@ -125,4 +143,4 @@ export const projects: Project[] = [
   },
 ];
 
-export const categories: ProjectCategory[] = ["Scraping", "Automation", "Integrations", "Monitoring", "Concepts"];
+export const categories: ProjectCategory[] = ["Products", "Scraping", "Automation", "Integrations", "Monitoring", "Concepts"];
